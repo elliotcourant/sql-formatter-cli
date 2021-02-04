@@ -13,7 +13,7 @@ let command = optimist
       .alias('h', 'help')
 
       .describe('i', 'Load a file. "-" - stdin')
-      .describe('s', 'Sql dialect: "sql" Standard SQL, "n1ql" Couchbase N1QL, "db2" IBM DB2, "pl/sql" Oracle PL/SQL')
+      .describe('s', 'Sql dialect: "sql" Standard SQL, "n1ql" Couchbase N1QL, "db2" IBM DB2, "pl/sql" Oracle PL/SQL, "postgresql" PostgreSQL')
       .describe('o', 'Output file name. "-" - stdout');
 let argv = command.argv;
 
@@ -22,7 +22,7 @@ if (argv.h) {
   process.exit();
 }
 
-const supportedDialects = ['sql', 'n1ql', 'db2', 'pl/sql'];
+const supportedDialects = ['sql', 'n1ql', 'db2', 'pl/sql', 'postgresql'];
 const dialect = argv.s;
 if (!~supportedDialects.indexOf(dialect)) {
   console.error(`Dialect "${dialect}" does not supported. Supported: ` + supportedDialects.join(', '));

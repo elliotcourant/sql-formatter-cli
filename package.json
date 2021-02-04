@@ -45,6 +45,6 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-watch": "^4.0.0",
-    "sql-formatter": "2.3.3"
+    "sql-formatter": "4.0.0"
   }
 }
